@@ -17,19 +17,19 @@ class MainPage: UIViewController {
         layout.itemSize = CGSize(width: 164, height: 192)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 16
-        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
     
     override func viewDidLoad() {
-        
+        self.navigationItem.hidesBackButton = true
         super.viewDidLoad()
         customizeAppearance()
         setUp()
         setupCollectionView()
     }
+    
     func loadDefaultCards() {
         let defaultCards = [
             Card(title: "დავითი ძაან კეთილია", description: "ქულა ბუღალტერიაში დამაკლო))", image: UIImage(named: "Icon1")!),
@@ -99,6 +99,6 @@ extension MainPage: UICollectionViewDataSource {
         return cell
     }
 }
-#Preview {
-    MainPage()
-}
+//#Preview {
+//    MainPage()
+//}

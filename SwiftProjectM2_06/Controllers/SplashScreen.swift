@@ -34,6 +34,6 @@ class SplashScreen: UIViewController {
     }
 }
 
-#Preview (){
-    SplashScreen()
-}
+//#Preview (){
+//    SplashScreen()
+//}

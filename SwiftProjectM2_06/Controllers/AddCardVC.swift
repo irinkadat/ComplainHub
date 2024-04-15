@@ -43,6 +43,7 @@ class AddCardVC: UIViewController {
         titleTextField.font = UIFont(name: "FiraGO-Medium", size: 12)
         titleTextField.borderStyle = .roundedRect
         titleTextField.backgroundColor = UIColor(red: 31/255.0, green: 34/255.0, blue: 45/255.0, alpha: 1)
+        titleTextField.textColor = .white
         titleTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
         
         descriptionLabel.textColor = .white
@@ -50,6 +51,7 @@ class AddCardVC: UIViewController {
         descriptionTextField.setPlaceholder(text: "მაგ: ფიგმამ გამიჭედა და ვინმემ გამომიგზავნეთ", color: UIColor(red: 99/255.0, green: 99/255.0, blue: 99/255.0, alpha: 1))
         descriptionTextField.font = UIFont(name: "FiraGO-Medium", size: 12)
         descriptionTextField.borderStyle = .roundedRect
+        descriptionTextField.textColor = .white
         descriptionTextField.backgroundColor = UIColor(red: 31/255.0, green: 34/255.0, blue: 45/255.0, alpha: 1)
         descriptionTextField.heightAnchor.constraint(equalToConstant: 44).isActive = true
         
@@ -140,8 +142,8 @@ class AddCardVC: UIViewController {
     }
     @objc func addCardButtonTapped() {
         guard let title = titleTextField.text, !title.isEmpty,
-              let description = descriptionTextField.text, !description.isEmpty,
-              let image = selectedIcon else { return }
+        let description = descriptionTextField.text, !description.isEmpty,
+        let image = selectedIcon else { return }
         let newCard = Card(title: title, description: description, image: image)
         
         onCardAdded?(newCard)
@@ -149,6 +151,6 @@ class AddCardVC: UIViewController {
     }
 }
 
-#Preview{
-    AddCardVC()
-}
+//#Preview{
+//    AddCardVC()
+//}

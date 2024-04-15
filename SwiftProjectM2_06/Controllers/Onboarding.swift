@@ -55,6 +55,6 @@ class Onboarding: UIViewController {
     }
 }
 
-#Preview {
-    Onboarding()
-}
+//#Preview {
+//    Onboarding()
+//}
